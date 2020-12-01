@@ -1,0 +1,19 @@
+{
+    "name": "djfrailey/advent-of-code",
+    "description": "Advent Of Code 2020 PHP Solutions",
+    "type": "project",
+    "authors": [
+        {
+            "name": "David Frailey",
+            "email": "d.j.frailey@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "AdventOfCode\\": "src/"
+        }
+    },
+    "require-dev": {
+        "psy/psysh": "^0.10.4"
+    }
+}

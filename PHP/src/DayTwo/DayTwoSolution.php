@@ -1013,10 +1013,22 @@ EXINPUT;
 7-8 p: ppppppdx
 SOLINPUT;
 
-    abstract public function solve() : void;
-
     protected function inputToEntries(string $input) : array
     {
         return explode("\n", $input);
     }
+
+    public function solve() : void
+    {
+        $count = 0;
+        foreach ($this->inputToEntries(static::SOLUTION_INPUT) as $entry) {
+            if ($this->isValidPassword($entry)) {
+                $count++;
+            }
+        }
+
+        echo "Valid Passwords: {$count}";
+    }
+
+    abstract protected function isValidPassword(string $entry) : bool;
 }
